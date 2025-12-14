@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Arcmax Interiors - Interior Design & Turnkey Contracting in India. 45+ Successful Projects. One-Stop Solution for Home & Commercial Interiors.">
+    <meta name="keywords" content="interior designer, turnkey interiors, home interiors, office interiors, furniture woodwork, false ceiling, Arcmax Interiors">
+    <meta name="author" content="Arcmax Interiors">
+    <meta name="robots" content="index, follow">
+    <title>Arcmax Interiors | Premium Interior Design & Turnkey Projects</title>
+    <!-- Google Fonts - Futura PT (Closest available) -->
+    <link href="https://fonts.googleapis.com/css2?family=Futura+PT:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Swiper.js for sliders -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <!-- Additional SEO Meta Tags -->
+    <meta property="og:title" content="Arcmax Interiors | Premium Interior Design & Turnkey Projects">
+    <meta property="og:description" content="Arcmax Interiors - Premium Interior Design & Turnkey Contracting in India. 45+ Successful Projects. One-Stop Solution for Home & Commercial Interiors.">
+    <meta property="og:image" content="https://arcmaxinteriors.com/images/hero-bg.jpg">
+    <meta property="og:url" content="https://arcmaxinteriors.com">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Arcmax Interiors">
+    <meta property="og:locale" content="en_IN">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Arcmax Interiors | Interior Design & Turnkey Projects">
+    <meta name="twitter:description" content="Arcmax Interiors - Interior Design & Turnkey Contracting in India. 45+ Successful Projects. One-Stop Solution for Home & Commercial Interiors.">
+    <meta name="twitter:image" content="https://arcmaxinteriors.com/images/hero-bg.jpg">
+    <meta name="twitter:site" content="@arcmaxinteriors">
+    <meta name="geo.region" content="IN">
+    <meta name="geo.placename" content="India">
+    <meta name="theme-color" content="#c9a96e">
+    <link rel="canonical" href="https://arcmaxinteriors.com">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <style>
+        :root {
+            --primary: #1a1a1a;
+            --light: #E6E8F0;
+            --accent: #c9a96e;
+            --text: #333;
+            --bg-main: #f0ede4; /* Main background color */
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Futura PT', 'Futura', sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        img { max-width: 100%; display: block; }
+        a { text-decoration: none; color: inherit; }
+        /* Hover Animations */
+        .animate-hover {
+            transition: all 0.4s ease;
+        }
+        .animate-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .text-animate:hover {
+            color: var(--accent);
+            transform: scale(1.05);
+            display: inline-block;
+        }
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 15px 0;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+        }
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+        .nav-links a {
+            font-weight: 500;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+        /* Remove cursor pointer from all nav links except the button */
+        .nav-links a:not(.btn-primary) {
+            cursor: default;
+        }
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 25px;
+            cursor: pointer;
+        }
+        .hamburger span {
+            width: 100%;
+            height: 3px;
+            background: var(--primary);
+            transition: 0.3s;
+        }
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('images/hero-bg.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        .hero-content h1 {
+            font-size: 62px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+        }
+        .hero-content p {
+            font-size: 22px;
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+            padding: 16px 40px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: 0.4s;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-primary:hover {
+            background: #b8955a;
+            transform: scale(1.1);
+        }
+        /* WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: white;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 35px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            z-index: 999;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37,211,102,0); }
+            100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+        }
+        /* Section Styling */
+        section {
+            padding: 100px 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        h2 {
+            text-align: center;
+            font-size: 48px;
+            margin-bottom: 70px;
+            position: relative;
+        }
+        h2::after {
+            content: '';
+            width: 100px;
+            height: 4px;
+            background: var(--accent);
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        /* Previous Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        .project-card {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .project-card img {
+            border-radius: 15px;
+        }
+        /* Vendors Slider */
+        .swiper-container {
+            padding: 50px 0;
+        }
+        .swiper-slide img {
+            border-radius: 10px;
+        }
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .service-card {
+            background: white;
+            padding: 40px 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+        }
+        .service-card i {
+            font-size: 50px;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+        /* Work Process */
+        .process {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+        }
+        .step {
+            text-align: center;
+            max-width: 260px;
+            background: white;
+            padding: 30px 20px;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+        }
+        .step:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.12);
+        }
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: var(--accent);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            margin: 0 auto 20px;
+        }
+        .step h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+        .step p {
+            font-size: 15px;
+            color: #666;
+        }
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+        .team-member {
+            text-align: center;
+            background: white;
+            padding: 40px 20px 30px;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+        }
+        .team-member:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        }
+        .team-member img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 25px;
+            border: 8px solid white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        .team-member h3 {
+            font-size: 24px;
+            margin-bottom: 8px;
+            color: var(--primary);
+        }
+        .team-member p {
+            font-size: 16px;
+            color: var(--accent);
+            font-weight: 500;
+        }
+        /* Contact Form */
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 25px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-family: 'Futura PT', sans-serif;
+            font-size: 16px;
+            background: white;
+        }
+        input:focus, textarea:focus, select:focus {
+            border-color: var(--accent);
+            outline: none;
+        }
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 80px 5% 30px;
+            text-align: center;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        .social-icons a {
+            font-size: 24px;
+            margin: 0 15px;
+            transition: 0.3s;
+        }
+        .social-icons a:hover {
+            color: var(--accent);
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links { 
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(255,255,255,0.95);
+                padding: 20px 0;
+                gap: 20px;
+                text-align: center;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .hamburger {
+                display: flex;
+            }
+            .hero-content h1 { font-size: 42px; }
+            .hero-content p { font-size: 18px; }
+            h2 { font-size: 36px; }
+            section { padding: 80px 5%; }
+            .team-member img {
+                width: 180px;
+                height: 180px;
+            }
+            .step {
+                max-width: 220px;
+                padding: 25px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/919828970747" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <!-- Header -->
+    <header>
+        <div class="navbar">
+            <div class="logo"><img src="images/favicon.ico" alt="Arcmax Logo" style="height: 28px; margin-right: 10px;">Arcmax Interiors</div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#services">Services</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+                <a href="#estimate" class="btn-primary">Get Estimate</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="text-animate">From Concept to Creation</h1>
+            <p>One-Stop Turnkey Interior Solutions</p>
+            <a href="#estimate" class="btn-primary animate-hover">Get Free Estimate</a>
+        </div>
+    </section>
+    <!-- About -->
+    <section id="about">
+        <h2>About Arcmax Interiors</h2>
+        <div style="max-width: 1000px; margin: 0 auto; text-align: center; font-size: 20px; line-height: 1.9;">
+            <p>
+                We, <strong>Arcmax Interiors</strong>, are an interior design and turnkey project firm committed to helping you turn your dream home into reality.
+                We have a team of experienced construction professionals who will guide you every step of the way.
+                We are committed to understanding your needs and making your project a success. If you want a space that fulfills your dreams, contact Arcmax Interiors as soon as possible.
+                We have a rich experience, including more than <strong>45 successful projects</strong>.
+               We provide our customers with a <strong>one-stop solution</strong> for all their interior design and interior work’s needs.
+                We are committed to completing your project <strong>on time and within budget</strong>.
+            </p>
+        </div>
+    </section>
+    <!-- Previous Projects -->
+    <section id="projects" style="background: var(--bg-main);">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card animate-hover"><img src="images/projects/project1.jpg" alt="Luxury Living Room Interior"></div>
+            <div class="project-card animate-hover"><img src="images/projects/project2.jpg" alt="Modern Kitchen Design"></div>
+            <div class="project-card animate-hover"><img src="images/projects/project3.jpg" alt="Bedroom Interior"></div>
+            <div class="project-card animate-hover"><img src="images/projects/project4.jpg" alt="Office Interior"></div>
+            <div class="project-card animate-hover"><img src="images/projects/project5.jpg" alt="Restaurant Interior"></div>
+            <div class="project-card animate-hover"><img src="images/projects/project6.jpg" alt="Villa Interior"></div>
+        </div>
+    </section>
+    <!-- Trusted Vendors -->
+    <section>
+        <h2>Our Trusted Material Partners</h2>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide animate-hover"><img src="images/vendors/vendor1.png" alt="Vendor 1"></div>
+                <div class="swiper-slide animate-hover"><img src="images/vendors/vendor2.png" alt="Vendor 2"></div>
+                <div class="swiper-slide animate-hover"><img src="images/vendors/vendor3.png" alt="Vendor 3"></div>
+                <div class="swiper-slide animate-hover"><img src="images/vendors/vendor4.png" alt="Vendor 4"></div>
+                <div class="swiper-slide animate-hover"><img src="images/vendors/vendor5.png" alt="Vendor 5"></div>
+                <div class="swiper-slide animate-hover"><img src="images/vendors/vendor6.png" alt="Vendor 6"></div>
+                <div class="swiper-slide animate-hover"><img src="images/vendors/vendor7.png" alt="Vendor 7"></div>
+                <div class="swiper-slide animate-hover"><img src="images/vendors/vendor8.png" alt="Vendor 8"></div>
+                <div class="swiper-slide animate-hover"><img src="images/vendors/vendor9.png" alt="Vendor 9"></div>
+                <div class="swiper-slide animate-hover"><img src="images/vendors/vendor10.png" alt="Vendor 10"></div>
+                <div class="swiper-slide animate-hover"><img src="images/vendors/vendor11.png" alt="Vendor 11"></div>
+                <div class="swiper-slide animate-hover"><img src="images/vendors/vendor12.png" alt="Vendor 12"></div>
+                <div class="swiper-slide animate-hover"><img src="images/vendors/vendor13.png" alt="Vendor 13"></div>
+                <div class="swiper-slide animate-hover"><img src="images/vendors/vendor14.png" alt="Vendor 14"></div>
+                <div class="swiper-slide animate-hover"><img src="images/vendors/vendor15.png" alt="Vendor 15"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+    <!-- Work Process -->
+    <section style="background: var(--bg-main);">
+        <h2>Work Process</h2>
+        <div class="process">
+            <div class="step animate-hover">
+                <div class="step-number">1</div>
+                <h3>Meet Customers</h3>
+                <p>Understanding your vision & requirements</p>
+            </div>
+            <div class="step animate-hover">
+                <div class="step-number">2</div>
+                <h3>Discussion & Design Finalization</h3>
+                <p>3D designs, material selection & approval</p>
+            </div>
+            <div class="step animate-hover">
+                <div class="step-number">3</div>
+                <h3>Quotation</h3>
+                <p>Transparent & detailed cost breakdown</p>
+            </div>
+            <div class="step animate-hover">
+                <div class="step-number">4</div>
+                <h3>Implement</h3>
+                <p>On-time execution with quality control</p>
+            </div>
+        </div>
+    </section>
+    <!-- Services -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card animate-hover"><i class="fas fa-palette"></i><h3>Interior Designing</h3></div>
+            <div class="service-card animate-hover"><i class="fas fa-chair"></i><h3>Furniture & Wood Work</h3></div>
+            <div class="service-card animate-hover"><i class="fas fa-cloud"></i><h3>False Ceiling</h3></div>
+            <div class="service-card animate-hover"><i class="fas fa-paint-roller"></i><h3>Color & Wallpapering</h3></div>
+            <div class="service-card animate-hover"><i class="fas fa-lightbulb"></i><h3>Electrical & Lighting</h3></div>
+            <div class="service-card animate-hover"><i class="fas fa-snowflake"></i><h3>AC Piping</h3></div>
+            <div class="service-card animate-hover"><i class="fas fa-window-maximize"></i><h3>Aluminium & Glass</h3></div>
+          <div class="service-card animate-hover"><i class="fas fa-ruler"></i><h3>Stone and Corian</h3></div>
+            <div class="service-card animate-hover"><i class="fas fa-couch"></i><h3>Upholstery & Curtains</h3></div>
+        </div>
+    </section>
+    <!-- Team -->
+    <section style="background: var(--bg-main);">
+        <h2>Meet Our Team</h2>
+        <div class="team-grid">
+            <div class="team-member animate-hover">
+                <img src="images/team/member1.jpg" alt="Rahul Sharma - Managing Director">
+                <h3>Bhanwar Suthar</h3>
+                <p>Managing Director</p>
+            </div>
+            <div class="team-member animate-hover">
+                <img src="images/team/member2.jpg" alt="Priya Mehta - Designing Head">
+                <h3>Gajendra Suthar</h3>
+                <p>Designing Head</p>
+            </div>
+            <div class="team-member animate-hover">
+                <img src="images/team/member3.jpg" alt="Amit Verma - Project Head">
+                <h3>Sawai Suthar</h3>
+                <p>Project Head</p>
+            </div>
+        </div>
+    </section>
+    <!-- Get Estimate Form -->
+    <section id="estimate">
+        <h2>Get Your Free Estimate Today</h2>
+        <div class="form-container">
+            <form action="https://formsubmit.co/info@arcmaxinteriors.com" method="POST">
+                <div class="form-group">
+                    <label>Your Name *</label>
+                    <input type="text" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone / WhatsApp *</label>
+                    <input type="tel" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" name="email">
+                </div>
+                <div class="form-group">
+                    <label>Project Location</label>
+                    <input type="text" name="location">
+                </div>
+                <div class="form-group">
+                    <label>Project Type</label>
+                    <select name="project_type">
+                        <option>Residential (Flat/Villa)</option>
+                        <option>Commercial (Office/Shop)</option>
+                        <option>Restaurant/Hotel</option>
+                        <option>Others</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Message / Requirements</label>
+                    <textarea name="message" rows="5" placeholder="Tell us about your dream space..."></textarea>
+                </div>
+                <button type="submit" class="btn-primary" style="width:100%; padding:18px; font-size:20px; border:none;">Send Inquiry</button>
+                <!-- Formsubmit settings -->
+                <input type="hidden" name="_subject" value="New Inquiry from Website - Arcmax Interiors">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://arcmaxinteriors.com/thanks.html">
+            </form>
+        </div>
+    </section>
+    <!-- Google Map -->
+    <section id="contact">
+        <h2>Visit Us</h2>
+        <div style="max-width:1000px; margin:0 auto; border-radius:20px; overflow:hidden; box-shadow:0 20px 50px rgba(0,0,0,0.2);">
+            <iframe src="https://www.google.com/maps/embed?pb=YOUR_GOOGLE_MAP_LINK_HERE" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <h2 style="color:white; margin-bottom:30px;">Arcmax Interiors</h2>
+        <p style="font-size:18px;">Turning Dreams into Reality – One Space at a Time</p>
+        <div class="footer-links">
+            <a href="tel:+919828970747" class="animate-hover"><i class="fas fa-phone"></i> +91 98289 70747</a>
+            <a href="mailto:info@arcmaxinteriors.com" class="animate-hover"><i class="fas fa-envelope"></i> info@arcmaxinteriors.com</a>
+        </div>
+        <div class="social-icons">
+            <a href="https://instagram.com/arcmaxinteriors" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://facebook.com/arcmaxinteriors" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://linkedin.com/company/arcmaxinteriors" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://x.com/arcmaxinteriors" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p style="margin-top:40px; opacity:0.8;">© 2025 Arcmax Interiors. All Rights Reserved.</p>
+    </footer>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper-container', {
+            slidesPerView: 6,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: { delay: 2500, disableOnInteraction: false },
+            pagination: { el: '.swiper-pagination', clickable: true },
+            breakpoints: {
+                320: { slidesPerView: 2 },
+                768: { slidesPerView: 4 },
+                1024: { slidesPerView: 6 }
+            }
+        });
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        // Hamburger Menu Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
