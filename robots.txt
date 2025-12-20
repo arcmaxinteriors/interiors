@@ -1,5 +1,9 @@
 User-agent: *
-Disallow:
-Disallow: /cgi-bin/
-Sitemap: https://www.arcmaxinteriors.com
+Allow: /
+Disallow: /README.md
+Disallow: /CNAME
+Disallow: /LICENSE
+Disallow: /private/
+Sitemap: https://arcmaxinteriors.com/sitemap.xml
+
 
