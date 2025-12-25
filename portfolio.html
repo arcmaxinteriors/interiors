@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Portfolio | Arcmax Interiors</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <style>
+        :root {
+            --primary: #808080; /* Aapka original grey color */
+            --text: #333;
+            --light-bg: #f9f9f9;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; color: var(--text); line-height: 1.6; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        /* Header Section */
+        .portfolio-header {
+            background: var(--primary);
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+        }
+        .portfolio-header h1 { font-size: 3rem; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 2px; }
+        .portfolio-header p { font-weight: 300; opacity: 0.9; }
+
+        /* Stats Section */
+        .stats-bar {
+            background: var(--white);
+            padding: 40px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            margin-top: -40px;
+            border-radius: 10px;
+        }
+        .stat-item h2 { color: var(--primary); font-size: 2.5rem; }
+        .stat-item p { font-size: 0.9rem; color: #666; font-weight: 500; }
+
+        /* Portfolio Grid */
+        .section { padding: 80px 0; }
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 50px;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 3px;
+            background: var(--primary);
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            height: 400px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s ease;
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            padding: 30px;
+            opacity: 0;
+            transition: 0.4s;
+            transform: translateY(20px);
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .portfolio-overlay h3 { font-size: 1.5rem; margin-bottom: 5px; }
+        .portfolio-overlay p { font-size: 0.9rem; font-weight: 300; }
+
+        /* Call to Action */
+        .cta-section {
+            background: var(--light-bg);
+            padding: 100px 0;
+            text-align: center;
+        }
+        .cta-btn {
+            background: var(--primary);
+            color: white;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: 0.3s;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .cta-btn:hover { background: #333; }
+
+        footer { background: var(--primary); color: white; text-align: center; padding: 30px; margin-top: 50px; }
+
+        @media (max-width: 768px) {
+            .portfolio-header h1 { font-size: 2rem; }
+            .portfolio-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="portfolio-header">
+        <div class="container">
+            <h1>Arcmax Portfolio</h1>
+            <p>Bringing Vision to Life through Premium Turnkey Solutions</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="stats-bar">
+            <div class="stat-item">
+                <h2>45+</h2>
+                <p>Projects Completed</p>
+            </div>
+            <div class="stat-item">
+                <h2>10+</h2>
+                <p>Years Experience</p>
+            </div>
+            <div class="stat-item">
+                <h2>100%</h2>
+                <p>Quality Focused</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="section container">
+        <h2 class="section-title">Our Featured Works</h2>
+        <div class="portfolio-grid">
+            
+            <div class="portfolio-item">
+                <img src="https://i.pinimg.com/736x/d7/51/78/d751786303df855ab0cda6f9970c4ee7.jpg" alt="Villa Interior">
+                <div class="portfolio-overlay">
+                    <h3>Luxury Villa</h3>
+                    <p>Residential | Turnkey Fit-out</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item">
+                <img src="https://i.pinimg.com/1200x/df/cb/b5/dfcbb59c88ddc8746461caebb9f25653.jpg" alt="Kitchen Design">
+                <div class="portfolio-overlay">
+                    <h3>Modern Kitchen</h3>
+                    <p>Custom Joinery & Corian Work</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item">
+                <img src="https://i.pinimg.com/1200x/80/59/90/8059907bd385e59818b7bfd658d6eaf4.jpg" alt="Commercial">
+                <div class="portfolio-overlay">
+                    <h3>Corporate Office</h3>
+                    <p>Glass Partitions & Electrical Work</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item">
+                <img src="https://i.pinimg.com/736x/88/66/89/8866899c5e6990259bc9142c33ff25d9.jpg" alt="Restaurant">
+                <div class="portfolio-overlay">
+                    <h3>Premium Restaurant</h3>
+                    <p>Themed Interiors & Upholstery</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item">
+                <img src="https://i.pinimg.com/736x/a1/0e/f3/a10ef37ba9b29f80b5c60a399617851b.jpg" alt="Lobby">
+                <div class="portfolio-overlay">
+                    <h3>Hotel Lobby</h3>
+                    <p>Marble & Metal Ceiling Work</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item">
+                <img src="https://i.pinimg.com/1200x/4b/20/16/4b20168fcc3bee2c1b33953acb41ec17.jpg" alt="Retail">
+                <div class="portfolio-overlay">
+                    <h3>Luxury Showroom</h3>
+                    <p>Display Units & Lighting Design</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to start your dream project?</h2>
+            <p>Join our list of 45+ happy clients in Ahmedabad.</p>
+            <a href="index.html#estimate" class="cta-btn">Get A Quote</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Arcmax Interiors. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
