@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Arcmax Interiors</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <style>
+        :root{--primary:#808080;--text:#333;--light-bg:#f9f9f9;}
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{font-family:'Poppins',sans-serif;line-height:1.6;color:var(--text);}
+        .container{max-width:1200px;margin:0 auto;padding:0 18px;}
+        
+        /* Header Match */
+        header{background:#fff;box-shadow:0 2px 10px rgba(0,0,0,0.1);position:sticky;top:0;z-index:1000;}
+        .nav-container{display:flex;align-items:center;justify-content:space-between;padding:12px 0;}
+        .logo-section{display:flex;align-items:center;gap:12px;font-weight:600;color:var(--primary);}
+        .logo-section img{height:60px;}
+        nav ul{display:flex;list-style:none;gap:30px;}
+        nav a{text-decoration:none;font-weight:500;transition:0.3s;}
+        nav a:hover{color:var(--primary);}
+
+        /* Hero Section */
+        .hero-mini{background:var(--primary);color:#fff;padding:60px 0;text-align:center;}
+        .hero-mini h1{font-size:2.5rem;margin-bottom:10px;}
+
+        /* Detailed Services */
+        .service-detail-item {padding: 80px 0; border-bottom: 1px solid #eee;}
+        .service-detail-item:nth-child(even) {background: var(--light-bg);}
+        
+        .row {display: flex; align-items: center; gap: 50px; flex-wrap: wrap;}
+        .col-img {flex: 1; min-width: 300px;}
+        .col-text {flex: 1; min-width: 300px;}
+        
+        .col-img img {width: 100%; border-radius: 12px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); transition: 0.4s;}
+        .col-img img:hover {transform: scale(1.02);}
+
+        .service-icon {font-size: 2.5rem; color: var(--primary); margin-bottom: 15px;}
+        .col-text h2 {font-size: 2rem; margin-bottom: 20px; color: var(--primary);}
+        .col-text p {margin-bottom: 20px; font-size: 1.1rem; text-align: justify;}
+        
+        .list-items {list-style: none;}
+        .list-items li {margin-bottom: 10px; display: flex; align-items: center; gap: 10px; font-weight: 500;}
+        .list-items li i {color: var(--primary); font-size: 1.2rem;}
+
+        /* CTA Section */
+        .cta {background: var(--primary); color: white; padding: 60px 0; text-align: center;}
+        .cta button {background: white; color: var(--primary); padding: 14px 32px; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; transition: 0.3s; margin-top: 20px;}
+        .cta button:hover {background: #eee;}
+
+        footer{background:#808080;color:#ddd;text-align:center;padding:40px 20px;}
+
+        @media (max-width: 768px) {
+            .row {flex-direction: column; text-align: center;}
+            .hero-mini h1 {font-size: 2rem;}
+            nav {display: none;}
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo-section">
+                <img src="Logo.png" alt="Logo">
+                <span>Arcmax Interiors</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="service.html" style="color:var(--primary)">Services</a></li>
+                    <li><a href="index.html#projects">Projects</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-mini">
+        <div class="container">
+            <h1>Our Expert Services</h1>
+            <p>Premium Interior & Turnkey Fit-out Solutions in Ahmedabad</p>
+        </div>
+    </section>
+
+    <section class="service-detail-item">
+        <div class="container row">
+            <div class="col-img">
+                <img src="https://i.pinimg.com/1200x/df/cb/b5/dfcbb59c88ddc8746461caebb9f25653.jpg" alt="Joinery Works">
+            </div>
+            <div class="col-text">
+                <div class="service-icon"><i class="fas fa-tools"></i></div>
+                <h2>Joinery & Woodworks</h2>
+                <p>Hum precision aur quality par focus karte hain. Hamari team custom cabinets, modular kitchens, aur high-end wardrobes design karti hai jo aapke ghar ko ek unique look dete hain.</p>
+                <ul class="list-items">
+                    <li><i class="fas fa-check-circle"></i> Custom Furniture & Cabinetry</li>
+                    <li><i class="fas fa-check-circle"></i> Modular Kitchen & Wardrobes</li>
+                    <li><i class="fas fa-check-circle"></i> Decorative Wall Paneling</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="service-detail-item">
+        <div class="container row" style="flex-direction: row-reverse;">
+            <div class="col-img">
+                <img src="https://i.pinimg.com/736x/d7/51/78/d751786303df855ab0cda6f9970c4ee7.jpg" alt="Corian Stone">
+            </div>
+            <div class="col-text">
+                <div class="service-icon"><i class="fas fa-gem"></i></div>
+                <h2>Corian & Stone Surfaces</h2>
+                <p>Hum premium solid surfaces (Corian) aur natural stones ka use karte hain. Ye surfaces seamless, hygienic aur luxurious dikhte hain, jo kitchen aur bathroom ke liye best hain.</p>
+                <ul class="list-items">
+                    <li><i class="fas fa-check-circle"></i> Seamless Corian Countertops</li>
+                    <li><i class="fas fa-check-circle"></i> Italian Marble & Quartz Installation</li>
+                    <li><i class="fas fa-check-circle"></i> Stone Wall Cladding</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="service-detail-item">
+        <div class="container row">
+            <div class="col-img">
+                <img src="https://i.pinimg.com/1200x/80/59/90/8059907bd385e59818b7bfd658d6eaf4.jpg" alt="Electric Work">
+            </div>
+            <div class="col-text">
+                <div class="service-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                <h2>Electrical Solutions</h2>
+                <p>Safety aur lighting humari priority hai. Complete wiring se lekar modern smart lighting installation tak, hum har ek electric point ko perfection ke saath execute karte hain.</p>
+                <ul class="list-items">
+                    <li><i class="fas fa-check-circle"></i> Concealed Wiring & Safety Checks</li>
+                    <li><i class="fas fa-check-circle"></i> Designer Lighting Installation</li>
+                    <li><i class="fas fa-check-circle"></i> Automation & Smart Home Integration</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="service-detail-item">
+        <div class="container row" style="flex-direction: row-reverse;">
+            <div class="col-img">
+                <img src="https://i.pinimg.com/1200x/4b/20/16/4b20168fcc3bee2c1b33953acb41ec17.jpg" alt="Glass Aluminum">
+            </div>
+            <div class="col-text">
+                <div class="service-icon"><i class="fas fa-window-maximize"></i></div>
+                <h2>Glass & Aluminum</h2>
+                <p>Modern office partitions ho ya villa ke sleek sliding windows, hum high-quality toughened glass aur slim profile aluminum ka use karte hain jo space ko open aur bright banata hai.</p>
+                <ul class="list-items">
+                    <li><i class="fas fa-check-circle"></i> Toughened Glass Partitions</li>
+                    <li><i class="fas fa-check-circle"></i> Aluminum Sliding Systems</li>
+                    <li><i class="fas fa-check-circle"></i> Acoustic Glass for Offices</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="service-detail-item">
+        <div class="container row">
+            <div class="col-img">
+                <img src="https://i.pinimg.com/736x/a1/0e/f3/a10ef37ba9b29f80b5c60a399617851b.jpg" alt="Paint Ceiling">
+            </div>
+            <div class="col-text">
+                <div class="service-icon"><i class="fa-solid fa-home"></i></div>
+                <h2>Ceiling & Paint Finishes</h2>
+                <p>Walls aur ceilings ghar ki soul hoti hain. Hum premium paint finishes (Royal/Velvet) aur custom false ceiling designs provide karte hain jo aapke interior ko complete look dete hain.</p>
+                <ul class="list-items">
+                    <li><i class="fas fa-check-circle"></i> Designer POP & Gypsum Ceilings</li>
+                    <li><i class="fas fa-check-circle"></i> Luxury Texture & Royal Paint</li>
+                    <li><i class="fas fa-check-circle"></i> Wallpaper & Wall Decor</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to transform your space?</h2>
+            <p>Get a customized plan and quote for your project today.</p>
+            <a href="index.html#estimate"><button>Request A Free Quote</button></a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Arcmax Interiors. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
